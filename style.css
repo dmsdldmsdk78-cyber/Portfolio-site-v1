@@ -169,7 +169,46 @@ h2 {
   text-decoration: none;
 }
 
-.split-panel,
+.info-box {
+  margin-top: 45px;
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 28px;
+}
+
+.mockup-screen img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.text-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+}
+
+.text-box h2 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.25;
+  color: #111827;
+}
+
+.text-box p {
+  margin-top: 25px;
+  font-size: 23px;
+  color: #374151;
+}
+
 .project-panel {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -190,7 +229,7 @@ h2 {
 .mockup-card {
   background: #ffffff;
   border-radius: 28px;
-  padding: 28px;
+  padding: 18px;
 }
 
 .mini-title,
@@ -208,16 +247,7 @@ h2 {
   line-height: 1.8;
 }
 
-/* .mockup-screen {
-  min-height: 360px;
-  border-radius: 24px;
-  background: linear-gradient(180deg, #151517 0%, #2d2d31 100%);
-  color: #fff;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-} */
+
 
 .mockup-grid {
   display: grid;
