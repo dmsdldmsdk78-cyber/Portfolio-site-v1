@@ -2,23 +2,24 @@
 <html lang="ko">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>고은아 포트폴리오</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" href="./img/apple.png" type="image/png">
 </head>
 
 <body>
-  <nav class="top-nav">
+  <nav class="top-nav" aria-label="주요 메뉴">
     <div class="nav-inner">
-      <a href="#hero" class="nav-logo" aria-label="home"></a>
+      <a href="#hero" class="nav-logo" aria-label="홈으로 이동"></a>
       <a href="#hero" class="nav-link active" data-section="hero">Home</a>
-      <a href="#about" class="nav-link" data-section="about">About</a>
-      <a href="#project1" class="nav-link" data-section="project1">Card</a>
-      <a href="#project2" class="nav-link" data-section="project2">Calculator</a>
-      <a href="#project3" class="nav-link" data-section="project3">Typing Game</a>
-      <a href="#project4" class="nav-link" data-section="project4">Photo Booth</a>
+      <a href="#about" class="nav-link" data-section="about">Figma</a>
+      <a href="#project1" class="nav-link" data-section="project1">Site_1</a>
+      <a href="#project2" class="nav-link" data-section="project2">Site_2</a>
+      <a href="#project3" class="nav-link" data-section="project3">Photo Booth</a>
+      <a href="#project4" class="nav-link" data-section="project4">Typing Game</a>
+      <a href="#mini-projects" class="nav-link" data-section="mini-projects">Mini</a>
       <a href="#contact" class="nav-link" data-section="contact">Contact</a>
     </div>
   </nav>
@@ -27,36 +28,36 @@
     <section class="screen" id="hero" data-section="hero">
       <div class="panel hero-panel">
         <p class="eyebrow">Front-end Portfolio</p>
-        <h1>
-          아이디어를 설계하고 구현합니다.
-        </h1>
+        <h1>아이디어를 설계하고 구현합니다.</h1>
         <p class="lead">
-         UI 동작과 화면 흐름을 구현한 프로젝트들을 정리했습니다.
+          인터랙션 중심 프로젝트부터 웹사이트까지<br>
+          HTML, CSS, JavaScript로 구현한 작업들을 정리했습니다.
         </p>
-        <div class="chip-list">
+
+        <div class="chip-list" aria-label="기술 스택">
           <span>HTML</span>
           <span>CSS</span>
           <span>JavaScript</span>
           <span>Figma</span>
-          <span>Notion/GitHub</span>
+          <span>GitHub</span>
+          <span>Notion</span>
         </div>
       </div>
     </section>
-
 
     <section class="screen" id="about" data-section="about">
       <div class="panel split-panel">
         <div class="info-box">
           <div class="mockup-card">
             <div class="mockup-screen">
-              <img src="./img/figma.JPEG" alt="">
+              <img src="./img/figma.JPEG" alt="퍼피노트 화면 흐름을 정리한 Figma 설계 화면">
             </div>
           </div>
         </div>
 
         <div class="text-box">
           <p class="section-label">Figma</p>
-          <h2>퍼피노트 UI를 피그마로 설계하고 화면 흐름을 정리했습니다.</h2>
+          <h2>퍼피노트</h2>
           <p>
             홈, 마이페이지, 다이어리, 지도, 케어 화면까지 전체 구조를 먼저 잡고,<br>
             사용자가 자연스럽게 이동할 수 있도록 화면 간 흐름과 구성을 시각화했습니다.
@@ -69,71 +70,78 @@
       <div class="panel project-panel">
         <div class="project-copy">
           <p class="section-label">Project 01</p>
-          <h2>Will you be my Valentine 💌</h2>
+          <h2>동물병원 웹사이트</h2>
           <p>
-            네 / 아니오 버튼의 서로 다른 반응을 중심으로 구성한 인터랙티브 카드 프로젝트입니다.
-            버튼 클릭 이벤트, 동적 위치 변경, 화면 상태 전환을 구현하며 JavaScript 기반 UI 제어
-            방식을 익혔습니다.
+            병원 소개와 진료 정보를 직관적으로 전달하는 반응형 웹사이트입니다.<br>
+            첫 화면에서 핵심 메시지가 바로 보이도록 구성하고,<br>
+            정보 안내 섹션을 깔끔하게 정리해 사용 흐름이 자연스럽게 이어지도록 구현했습니다.
           </p>
+
           <div class="chip-list">
-            <a href="https://valentinecard-zeta.vercel.app/" target="_blank">프로젝트 바로가기</a>
-            <span>UI Animation</span>
-            <span>DOM Event</span>
+            <a href="https://pet-hospital-site-v1.vercel.app/" target="_blank" rel="noopener noreferrer">프로젝트 바로가기</a>
+            <span>Responsive Layout</span>
+            <span>Section Navigation</span>
           </div>
         </div>
 
         <div class="mockup-card">
           <div class="mockup-screen">
-            <img src="./img/IMG_4495.GIF" alt="">
+            <img src="./img/pet.PNG" alt="동물병원 웹사이트 메인 화면">
           </div>
         </div>
       </div>
     </section>
 
     <section class="screen" id="project2" data-section="project2">
-      <div class="panel project-panel">
-        <div class="project-copy">
-          <p class="section-label">Project 02</p>
-          <h2>Beep Calculator 🔊 </h2>
-          <p>
-            버튼을 누를 때마다 사운드가 재생되는 인터랙티브 계산기입니다.<br>
-            계산 기능을 넘어 사용자가 누르는 재미를 느끼는 UI를 목표로 만들었습니다.
-          </p>
-          <div class="chip-list">
-            <a href="https://calculator-beta-ten-22.vercel.app/" target="_blank">프로젝트 바로가기</a>
-            <span>Sound</span>
-            <span>UI Interaction</span>
+      <div class="panel project-panel reverse-panel">
+        <div class="mockup-card">
+          <div class="mockup-screen">
+            <img src="./img/petmall.PNG" alt="프리미엄 펫몰 웹사이트 메인 화면">
           </div>
         </div>
 
-        <div class="mockup-card">
-          <div class="mockup-screen">
-            <img src="./img/IMG_4493.GIF" alt="">
+        <div class="project-copy">
+          <p class="section-label">Project 02</p>
+          <h2>쇼핑몰 웹사이트</h2>
+          <p>
+            상품을 편하게 둘러볼 수 있도록 구성한 반응형 펫몰 웹사이트입니다.<br>
+            배너, 카테고리, 상품 카드, 리뷰 섹션을 배치해
+            쇼핑몰 특유의 탐색 흐름이 자연스럽게 이어지도록 화면을 구현했습니다.
+          </p>
+
+          <div class="chip-list">
+            <a href="https://petmall-site-v1.vercel.app/" target="_blank" rel="noopener noreferrer">프로젝트 바로가기</a>
+            <span>Product Grid</span>
+            <span>Category UI</span>
           </div>
         </div>
       </div>
     </section>
 
     <section class="screen" id="project3" data-section="project3">
-      <div class="panel project-panel reverse-panel">
-        <div class="mockup-card">
-          <div class="mockup-screen">
-            <img src="./img/typing.gif" alt="">
+      <div class="panel project-panel">
+        <div class="project-copy">
+          <p class="section-label">Project 03</p>
+          <h2>Photo Booth 📸</h2>
+          <p>
+            사용자의 카메라를 활용해 사진을 촬영하고,
+            다양한 스티커를 배치해 꾸민 뒤 완성된 이미지를 저장할 수 있는 웹 포토부스입니다.
+            MediaDevices API로 실시간 카메라 영상을 가져오고,
+            드래그 배치와 Canvas 합성을 통해 결과 이미지를 저장할 수 있도록 구현했습니다.
+          </p>
+
+          <div class="chip-list">
+            <a href="https://photobooth-git-main-dmsdldmsdk78-cybers-projects.vercel.app/" target="_blank"
+              rel="noopener noreferrer">프로젝트 바로가기</a>
+            <span>Camera API</span>
+            <span>Canvas</span>
+            <span>Drag Interaction</span>
           </div>
         </div>
 
-        <div class="project-copy">
-          <p class="section-label">Project 03</p>
-          <h2>Typing Rain Game 🎬</h2>
-          <p>
-            이와이 슌지 영화에서 착안한 산성비 스타일 타이핑 게임입니다.
-            떨어지는 단어를 입력해 제거하는 구조로, 게임 루프와 점수 반영,
-            상태 변화에 따른 화면 업데이트를 구현했습니다.
-          </p>
-          <div class="chip-list">
-            <a href="https://js-simple-typing-game-omega.vercel.app/" target="_blank">프로젝트 바로가기</a>
-            <span>Game Logic</span>
-            <span>DOM</span>
+        <div class="mockup-card">
+          <div class="mockup-screen">
+            <img src="./img/window.gif" alt="웹 포토부스 프로젝트 실행 화면">
           </div>
         </div>
       </div>
@@ -143,51 +151,95 @@
       <div class="panel project-panel reverse-panel">
         <div class="mockup-card">
           <div class="mockup-screen">
-            <img src="./img/window.gif" alt="">
+            <img src="./img/typing.gif" alt="타이핑 레인 게임 실행 화면">
           </div>
         </div>
 
         <div class="project-copy">
           <p class="section-label">Project 04</p>
-          <h2>Photo Booth 📸</h2>
+          <h2>Typing Rain Game 🎬</h2>
           <p>
-            사용자의 카메라를 활용해 사진을 촬영하고,
-            다양한 스티커를 배치해 꾸민 뒤 완성된 이미지를 저장할 수 있는 웹 포토부스입니다.<br>
-
-            브라우저의 MediaDevices API로 실시간 카메라 영상을 가져오고,
-            DOM 기반 드래그 배치를 통해 스티커를 자유롭게 배치할 수 있도록 구현했습니다.<br>
-
-            완성된 화면은 Canvas로 합성하여 하나의 이미지로 다운로드할 수 있습니다.
+            이와이 슌지 영화의 분위기에서 착안한 산성비 스타일 타이핑 게임입니다.
+            떨어지는 단어를 입력해 제거하는 구조를 만들었고,
+            게임 루프, 점수 반영, 상태 변화에 따른 화면 업데이트를 구현했습니다.
           </p>
+
           <div class="chip-list">
-            <a href="https://photobooth-git-main-dmsdldmsdk78-cybers-projects.vercel.app/" target="_blank">프로젝트 바로가기</a>
-            <span>Camera API</span>
-            <span>Canvas</span>
-            <span>Image Compose</span>
+            <a href="https://js-simple-typing-game-omega.vercel.app/" target="_blank" rel="noopener noreferrer">프로젝트
+              바로가기</a>
+            <span>Game Logic</span>
+            <span>DOM</span>
+            <span>State Update</span>
           </div>
         </div>
       </div>
     </section>
 
+    <section class="screen" id="mini-projects" data-section="mini-projects">
+      <div class="panel">
+        <p class="section-label">Mini Projects</p>
+        <h2>미니 인터랙션 프로젝트</h2>
+
+        <div class="mini-project-grid">
+          <article class="mini-project-card">
+            <div class="mini-project-thumb">
+              <img src="./img/IMG_4493.GIF" alt="타이핑 레인 게임 실행 화면">
+            </div>
+            <h3>Beep Calculator 🔊</h3>
+            <p>
+              버튼을 누를 때마다 사운드가 재생되는 인터랙티브 계산기입니다.
+              계산 기능과 함께 입력 피드백을 주는 UI를 구현했습니다.
+            </p>
+            <div class="chip-list">
+              <a href="https://calculator-beta-ten-22.vercel.app/" target="_blank" rel="noopener noreferrer">프로젝트
+                바로가기</a>
+              <span>Sound</span>
+              <span>UI Interaction</span>
+            </div>
+          </article>
+
+          <article class="mini-project-card">
+            <div class="mini-project-thumb">
+              <img src="./img/IMG_4495.GIF" alt="타이핑 레인 게임 실행 화면">
+            </div>
+            <h3>Will you be my Valentine 💌</h3>
+            <p>
+              네/아니오 버튼의 서로 다른 반응을 중심으로 구성한 인터랙티브 카드 프로젝트입니다.
+              버튼 클릭 이벤트, 동적 위치 변경, 화면 상태 전환을 구현했습니다.
+            </p>
+            <div class="chip-list">
+              <a href="https://valentinecard-zeta.vercel.app/" target="_blank" rel="noopener noreferrer">프로젝트 바로가기</a>
+              <span>UI Animation</span>
+              <span>DOM Event</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
     <section class="screen" id="contact" data-section="contact">
       <div class="panel contact-panel">
         <p class="section-label">Contact</p>
         <h2>좋은 작업을 계속 이어가고 싶습니다.</h2>
         <p>
-
-          다양한 아이디어로 실제 화면을 구현하며,<br>
-          웹 기술로 모바일 환경까지 아우르는 유연한 화면을 구현하는 개발자가 되고 싶습니다.
+          화면 구조를 설계하고 구현하는 과정을 좋아합니다.<br>
+          앞으로도 사용자가 자연스럽게 이해하고 경험할 수 있는 인터페이스를 꾸준히 만들고 싶습니다.
         </p>
 
         <div class="chip-list">
-          <a href="https://github.com/dmsdldmsdk78-cyber?tab=repositories" target="_blank">▶ GitHub</a>
-          <a href="https://www.instagram.com/no_more_bug?igsh=eWk3bHljd3gyOXdw&utm_source=qr" target="_blank">▶
-            instagram</a>
-          <span>▶ dmsdldmsdk78@gmail.com</span>
+          <a href="https://github.com/dmsdldmsdk78-cyber?tab=repositories" target="_blank"
+            rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.instagram.com/no_more_bug?igsh=eWk3bHljd3gyOXdw&utm_source=qr" target="_blank"
+            rel="noopener noreferrer">Instagram</a>
+          <a href="mailto:dmsdldmsdk78@gmail.com">dmsdldmsdk78@gmail.com</a>
         </div>
       </div>
     </section>
+
+    <aside class="quick-menu">
+      <a href="#hero" class="quick-btn">TOP</a>
+    </aside>
+
   </main>
 
   <script src="script.js"></script>
