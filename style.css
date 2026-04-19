@@ -91,6 +91,14 @@ html:focus-within {
   width: 100%;
 }
 
+
+.hero-icons {
+  margin-top: 20px;
+  display: block;
+  width: 420px;
+  max-width: 100%;
+}
+
 .screen {
   min-height: 100vh;
   display: flex;
