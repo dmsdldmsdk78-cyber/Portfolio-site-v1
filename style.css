@@ -19,20 +19,20 @@ ul {
 
 body {
   padding-top: 44px;
-  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+  font-family: "Chiron GoRound TC", sans-serif;
   background: #ffffff;
   color: #1d1d1f;
 }
 
 img {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
 }
 
-html:focus-within {
-  scroll-behavior: smooth;
-}
 
+/* =========================
+   Navigation
+========================= */
 .top-nav {
   position: fixed;
   inset: 0 0 auto 0;
@@ -55,65 +55,57 @@ html:focus-within {
   gap: 28px;
 }
 
-.nav-inner .nav-logo {
-  display: inline-block;
+.nav-logo {
   width: 35px;
   height: 35px;
+  flex: 0 0 auto;
   background-image: url("./img/apple.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.nav-logo,
 .nav-link {
-  text-decoration: none;
   color: #8d8d92;
   font-size: 12px;
   font-weight: 500;
+  text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .nav-link:hover,
 .nav-link:focus-visible,
-.chip-list a:hover,
-.chip-list a:focus-visible {
+.nav-link.active {
   color: #1d1d1f;
-  outline: none;
 }
 
 .nav-link.active {
-  color: #1d1d1f;
   font-weight: 700;
 }
 
+
+/* =========================
+   Layout
+========================= */
 .page {
   width: 100%;
 }
 
-
-.hero-icons {
-  margin-top: 20px;
-  display: block;
-  width: 420px;
-  max-width: 100%;
-}
-
 .screen {
   min-height: 100vh;
+  padding: 48px 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 48px 24px;
   scroll-margin-top: 64px;
 }
 
 .panel {
   width: min(1200px, 100%);
   min-height: 82vh;
+  padding: 56px;
   background: #f5f5f7;
   border-radius: 36px;
-  padding: 56px;
   box-shadow: 0 24px 60px rgba(17, 17, 17, 0.08);
   opacity: 0;
   transform: translateY(24px);
@@ -125,31 +117,28 @@ html:focus-within {
   transform: translateY(0);
 }
 
-.hero-panel {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: linear-gradient(135deg, #f5f5f7 0%, #ececf1 100%);
-}
 
+/* =========================
+   Typography
+========================= */
 .eyebrow,
 .section-label {
   margin-bottom: 12px;
+  color: #6e6e73;
   font-size: 15px;
   font-weight: 700;
-  color: #6e6e73;
 }
 
 h1 {
-  font-size: clamp(22px, 7vw, 72px);
-  line-height: 1.04;
-  letter-spacing: -0.05em;
   margin-bottom: 20px;
+  font-size: clamp(28px, 6vw, 50px);
+  line-height: 1.08;
+  letter-spacing: -0.05em;
 }
 
 h2 {
   margin-bottom: 18px;
-  font-size: clamp(22px, 5vw, 32px);
+  font-size: clamp(24px, 5vw, 32px);
   line-height: 1.15;
   letter-spacing: -0.04em;
 }
@@ -162,59 +151,57 @@ h3 {
 }
 
 .lead,
-.text-box p,
+.section-head p,
+.project-copy p,
+.contact-panel p,
+.mini-project-card p,
+.portfolio-info p {
+  color: #4d4d52;
+  line-height: 1.75;
+}
+
+.lead,
+.section-head p,
 .project-copy p,
 .contact-panel p,
 .mini-project-card p {
   max-width: 760px;
   font-size: 18px;
-  line-height: 1.75;
-  color: #4d4d52;
 }
 
-.chip-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 28px;
+.portfolio-info p {
+  font-size: 16px;
 }
 
-.chip-list a,
-.chip-list span {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 11px 16px;
-  border-radius: 999px;
-  background: #ffffff;
-  color: #1d1d1f;
-  font-size: 14px;
-  font-weight: 600;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  text-decoration: none;
-}
 
-.split-panel {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 28px;
-}
-
-.info-box {
-  width: 100%;
-}
-
-.text-box {
+/* =========================
+   Hero
+========================= */
+.hero-panel {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background: linear-gradient(135deg, #f5f5f7 0%, #ececf1 100%);
 }
 
-.text-box p {
-  margin-top: 12px;
+.hero-icons {
+  width: 420px;
+  max-width: 100%;
+  margin-top: 20px;
 }
 
+
+/* =========================
+   Section Header
+========================= */
+.section-head {
+  margin-bottom: 36px;
+}
+
+
+/* =========================
+   Design Section
+========================= */
 .project-panel {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -222,15 +209,16 @@ h3 {
   align-items: center;
 }
 
-.reverse-panel {
-  grid-template-columns: 0.9fr 1.1fr;
+.project-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.mockup-card,
-.mini-project-card {
+.mockup-card {
+  padding: 10px;
   background: #ffffff;
   border-radius: 25px;
-  padding: 10px;
 }
 
 .mockup-screen img {
@@ -240,38 +228,153 @@ h3 {
   border-radius: 20px;
 }
 
-.mini-project-grid {
+
+/* =========================
+   Publishing / Front-end Cards
+========================= */
+.project-card-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
+}
+
+.portfolio-card {
+  padding: 14px;
+  background: #ffffff;
+  border-radius: 28px;
+  box-shadow: 0 12px 32px rgba(17, 17, 17, 0.05);
+}
+
+.portfolio-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  margin-bottom: 22px;
+  overflow: hidden;
+  background: #f1f1f3;
+  border-radius: 22px;
+}
+
+.portfolio-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.portfolio-info {
+  padding: 0 8px 10px;
+}
+
+
+/* =========================
+   Mini Projects
+========================= */
+.mini-project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
   margin-top: 32px;
+  align-items: stretch;
 }
 
 .mini-project-card {
+  height: 100%;
+  min-height: 500px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  background: #ffffff;
+  border-radius: 25px;
 }
 
 .mini-project-thumb {
   width: 100%;
-  aspect-ratio: 3 / 5;
-  overflow: hidden;
-  border-radius: 20px;
-  background: #f1f1f3;
+  height: 210px;
   margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #f1f1f3;
+  border-radius: 20px;
 }
 
 .mini-project-thumb img {
   width: 100%;
   height: 100%;
+  padding: 8px;
   object-fit: contain;
-  display: block;
 }
 
+.mini-project-card h3 {
+  min-height: 58px;
+  margin-bottom: 12px;
+}
+
+/* 미니 프로젝트 버튼은 2열로 강제 정렬 */
 .mini-project-card .chip-list {
-  margin-top: auto;
-  padding-top: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  align-items: center;
+}
+
+/* 기존 chip-list의 flex-wrap 영향 제거 */
+.mini-project-card .chip-list a,
+.mini-project-card .chip-list span {
+  width: fit-content;
+  white-space: nowrap;
+}
+
+/* 글자 하이라이트효과 */
+.text-highlight {
+  background: linear-gradient(to top,
+      rgba(173, 194, 240, 0.45) 45%,
+      transparent 45%);
+  padding: 0 3px;
+}
+
+/* =========================
+   Buttons / Chips
+========================= */
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.chip-list a,
+.chip-list span {
+  min-height: 42px;
+  padding: 11px 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #1d1d1f;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 999px;
+}
+
+.chip-list a:hover,
+.chip-list a:focus-visible {
+  color: #1d1d1f;
+  outline: none;
+  transform: translateY(-2px);
+  transition: transform 0.2s ease;
+}
+
+
+/* =========================
+   Contact
+========================= */
+.contact-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .social-chip-list {
@@ -282,21 +385,23 @@ h3 {
 }
 
 .social-icon {
+  padding: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
   background: transparent;
   border: 0;
   box-shadow: none;
   text-decoration: none;
+  transition: transform 0.2s ease;
 }
 
-.github-img {
-  width: 76px;
-  height: 76px;
+.social-icon:hover,
+.email-chip:hover {
+  transform: translateY(-2px);
 }
 
+.github-img,
 .instagram-img {
   width: 76px;
   height: 76px;
@@ -305,50 +410,46 @@ h3 {
 .email-chip {
   height: 54px;
   padding: 0 24px;
-  border-radius: 999px;
-  background: #fff;
-  border: 1px solid #ececec;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
   color: #111827;
   font-size: 14px;
   font-weight: 700;
+  text-decoration: none;
+  background: #ffffff;
+  border: 1px solid #ececec;
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease;
 }
 
-.social-icon:hover,
-.email-chip:hover {
-  transform: translateY(-2px);
-  transition: 0.2s ease;
-}
 
-.contact-panel {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
+/* =========================
+   Quick Menu
+========================= */
 .quick-menu {
   position: fixed;
   right: 22px;
   bottom: 22px;
   z-index: 90;
-  display: grid;
-  gap: 12px;
 }
 
 .quick-btn {
   width: 50px;
   height: 50px;
+  display: block;
 }
 
+
+/* =========================
+   Responsive
+========================= */
 @media (max-width: 900px) {
   .nav-inner {
     gap: 16px;
-    overflow-x: auto;
     justify-content: flex-start;
+    overflow-x: auto;
     white-space: nowrap;
     scrollbar-width: none;
   }
@@ -358,15 +459,18 @@ h3 {
   }
 
   .panel {
-    padding: 32px;
     min-height: auto;
+    padding: 32px;
   }
 
-  .split-panel,
   .project-panel,
-  .reverse-panel,
+  .project-card-grid,
   .mini-project-grid {
     grid-template-columns: 1fr;
+  }
+
+  .mini-project-card h3 {
+    min-height: auto;
   }
 }
 
@@ -376,19 +480,39 @@ h3 {
   }
 
   .panel {
-    border-radius: 24px;
     padding: 24px;
+    border-radius: 24px;
   }
 
   .lead,
-  .text-box p,
+  .section-head p,
   .project-copy p,
   .contact-panel p,
   .mini-project-card p {
     font-size: 16px;
   }
 
+  h1 {
+    font-size: clamp(30px, 10vw, 42px);
+  }
+
   h3 {
     font-size: 20px;
+  }
+
+  .mini-project-thumb {
+    height: 200px;
+  }
+
+  .github-img,
+  .instagram-img {
+    width: 58px;
+    height: 58px;
+  }
+
+  .email-chip {
+    height: 48px;
+    padding: 0 18px;
+    font-size: 13px;
   }
 }
