@@ -1,8 +1,8 @@
 @font-face {
-    font-family: 'Giranghaerang';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMKIRANGHAERANG.woff') format('woff');
-    font-weight: normal;
-    font-display: swap;
+  font-family: 'Giranghaerang';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMKIRANGHAERANG.woff') format('woff');
+  font-weight: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -108,7 +108,7 @@ a {
 }
 
 .logo {
-  font-family: "Playfair Display", serif;
+  font-family: 'JejuStoneWall';
   font-weight: 800;
   font-size: 21px;
   letter-spacing: -0.03em;
@@ -213,7 +213,7 @@ main {
 }
 
 .hero h1 span {
-  font-family: 'JejuStoneWall';
+  font-family: 'Giranghaerang';
   font-size: clamp(42px, 10vw, 80px);
   color: var(--pink);
   text-shadow: 4px 4px 0 var(--blue), 5px 5px 0 #fff;
@@ -221,7 +221,7 @@ main {
 }
 
 .hero h1 strong {
-  font-family: "Playfair Display", serif;
+  font-family: 'Giranghaerang';
   font-size: clamp(58px, 8.4vw, 80px);
   font-weight: 800;
   color: #87e6a7;
@@ -510,7 +510,7 @@ main {
   border: 3px solid #fff;
   border-radius: 28px;
   color: var(--ink);
-  box-shadow: 10px 10px 0 rgba(32, 32, 38, 0.16);
+  box-shadow: 10px 10px 0 rgba(135, 135, 231, 0.16);
   cursor: pointer;
   transition: transform .22s ease, box-shadow .22s ease, opacity .22s ease, filter .22s ease;
 }
@@ -556,7 +556,6 @@ main {
 .sticker-item.frontend:nth-of-type(5) {
   --r: -2deg;
   background: var(--pink);
-  color: #fff;
   transform: rotate(-1deg);
 }
 
@@ -568,8 +567,8 @@ main {
 
 .sticker-icon {
   font-size: 33px;
-  filter: drop-shadow(2px 2px 0 #989d9e);
-   font-family: 'Giranghaerang';
+  filter: drop-shadow(2px 2px 0 #ffffff);
+  font-family: 'Giranghaerang';
 }
 
 .sticker-item b {
@@ -590,13 +589,12 @@ main {
 .click-note {
   position: absolute;
   right: -8px;
-  top: -18px;
-  color: var(--ink);
-  font-family: "Playfair Display", serif;
+  top: 5px;
+  color: #f1ef71;
   font-size: 28px;
-  font-style: italic;
   font-weight: 800;
   transform: rotate(8deg);
+  font-family: 'Giranghaerang';
 }
 
 .project-detail {
@@ -762,76 +760,105 @@ main {
   margin-top: 26px;
   padding: 34px;
   display: grid;
-  grid-template-columns: 240px 1fr;
+  grid-template-columns: 190px 1fr;
   gap: 28px;
   align-items: center;
 }
 
 .skill-list {
   display: grid;
-  grid-template-columns: repeat(7, minmax(86px, 1fr));
+  grid-template-columns: repeat(7, minmax(82px, 1fr));
   gap: 14px;
 }
 
 .skill {
-  min-height: 112px;
-  padding: 14px;
+  min-height: 118px;
+  padding: 12px;
   display: grid;
   place-items: center;
-  gap: 8px;
+  align-content: center;
+  gap: 9px;
   text-align: center;
   background: #fff;
-  border-radius: 22px;
-  border: 1px solid rgba(0, 0, 0, .06);
-  box-shadow: 0 10px 24px rgba(32, 32, 38, .08);
+  border: 2px solid rgba(32, 32, 38, 0.08);
+  border-radius: 24px;
+  box-shadow: 7px 7px 0 rgba(32, 32, 38, 0.08);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.skill:hover {
+  transform: translate(-3px, -3px) rotate(-1deg);
+  box-shadow: 10px 10px 0 rgba(32, 32, 38, 0.14);
+}
+
+.skill b,
+.skill span {
+  width: 64px;
+  display: grid;
+  place-items: center;
+  font-weight: 1000;
+}
+
+.skill b {
+  min-height: 30px;
+  border-radius: 14px 14px 8px 8px;
+  font-size: 12px;
 }
 
 .skill span {
-  width: 44px;
-  height: 44px;
-  display: grid;
-  place-items: center;
-  border-radius: 12px;
-  background: #f4f4f5;
-  font-weight: 1000;
-  color: var(--ink);
+  height: 48px;
+  margin-top: -6px;
+  border-radius: 8px 8px 14px 14px;
+  font-size: 18px;
 }
 
+/* HTML */
+.skill:nth-child(1) b,
 .skill:nth-child(1) span {
   background: #ffdfd4;
   color: #ed5529;
 }
 
+/* CSS */
+.skill:nth-child(2) b,
 .skill:nth-child(2) span {
   background: #d9ecff;
   color: #2777d8;
 }
 
+/* JS */
+.skill:nth-child(3) b,
 .skill:nth-child(3) span {
   background: #fff16a;
+  color: #222228;
 }
 
+/* React */
+.skill:nth-child(4) b,
 .skill:nth-child(4) span {
   background: #e1f8ff;
   color: #21aee8;
 }
 
+/* Figma */
+.skill:nth-child(5) b,
 .skill:nth-child(5) span {
   background: #ffe1f0;
   color: #ff3e9d;
 }
 
+/* Notion */
+.skill:nth-child(6) b,
 .skill:nth-child(6) span {
   background: #f1f1f1;
+  color: #222228;
 }
 
+/* Canva */
+.skill:nth-child(7) b,
 .skill:nth-child(7) span {
   background: #d6fbff;
   color: #10a8c9;
-}
-
-.skill b {
-  font-size: 13px;
 }
 
 .contact {

@@ -16,7 +16,7 @@ const projects = {
     tags: ["HTML", "CSS", "Responsive", "Visual"],
     link: "https://sweet-dream-pi.vercel.app/",
     detailLink: "https://sweet-dream-pi.vercel.app/",
-    img: "./img/2026-07-01 03;43;36.jpeg",
+    img: "./img/2026-07-01 03;43;36.JPEG",
     imgAlt: "Sweet Dream 퍼블리셔 프로젝트 이미지"
   },
   "pub-brochure": {
@@ -26,7 +26,7 @@ const projects = {
     tags: ["HTML", "CSS", "Shopping Mall", "Layout"],
     link: "https://mum-pet-shop.vercel.app/",
     detailLink: "https://mum-pet-shop.vercel.app/",
-    img: "./img/petmall.png",
+    img: "./img/petmall.PNG",
     imgAlt: "MUM Pet Shop 퍼블리셔 프로젝트 이미지"
   },
   "pub-detail": {
@@ -36,7 +36,7 @@ const projects = {
     tags: ["HTML", "CSS", "Hospital", "Responsive"],
     link: "https://pet-hospital-site-v1.vercel.app/",
     detailLink: "https://pet-hospital-site-v1.vercel.app/",
-    img: "./img/pet.png",
+    img: "./img/pet.PNG",
     imgAlt: "Pet Hospital 퍼블리셔 프로젝트 이미지"
   },
   "couple-test": {
