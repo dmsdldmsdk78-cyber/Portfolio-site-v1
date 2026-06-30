@@ -1551,10 +1551,161 @@ main {
 }
 
 @media (max-width: 680px) {
-  .mock-screen {
-    height: 210px;
+  .hero-art {
+    min-height: 360px;
+  }
+
+  .id-card-scene {
+    min-height: 330px;
+  }
+
+  .flip-card {
+    width: min(340px, 100%);
+    height: 260px;
+    min-height: 260px;
+    transform-style: flat;
+    animation: none;
+    transform: rotate(-2deg) !important;
+  }
+
+  .flip-card.is-flipped {
+    transform: rotate(-2deg) !important;
+  }
+
+  .card-face {
+    height: 260px;
+    min-height: 260px;
+    padding: 18px;
+    transform: none !important;
+    backface-visibility: visible;
+    -webkit-backface-visibility: visible;
+    transition: opacity 0.25s ease;
+  }
+
+  .card-front {
+    opacity: 1;
+    z-index: 2;
+  }
+
+  .card-back {
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .flip-card.is-flipped .card-front {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .flip-card.is-flipped .card-back {
+    opacity: 1;
+    z-index: 3;
+    pointer-events: auto;
+  }
+
+  .id-body {
+    grid-template-columns: 92px 1fr;
+    gap: 16px;
+  }
+
+  .id-photo {
+    width: 92px;
+    height: 112px;
+    overflow: hidden;
+  }
+
+  .id-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
+  }
+
+  .id-info {
+    gap: 6px;
+  }
+
+  .id-info span {
+    grid-template-columns: 44px 1fr;
+    gap: 6px;
+    padding-bottom: 5px;
+  }
+
+  .id-info b {
+    font-size: 10px;
+  }
+
+  .id-info em {
+    font-size: 11px;
+    line-height: 1.2;
+  }
+
+  .id-bottom {
+    margin-top: 16px;
+  }
+
+  .id-bottom strong {
+    font-size: 11px;
+  }
+
+  .id-bottom em {
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+  }
+
+  .card-shadow-card {
+    width: min(320px, 92%);
+    height: 250px;
+    transform: rotate(6deg) translate(18px, 24px);
+  }
+    .contact-links {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
+
+  .contact-chip {
+    flex: 1 1 auto;
+    min-width: 0;
+    height: 52px;
+    padding: 0 12px;
+    justify-content: flex-start;
+  }
+
+  .contact-chip b {
+    min-width: 0;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .contact-chip span {
+    width: 28px;
+    height: 28px;
+    flex: 0 0 28px;
+  }
+
+  .social-link {
+    width: 52px;
+    height: 52px;
+    flex: 0 0 52px;
+    border-radius: 16px;
+  }
+
+  .social-link img {
+    width: 28px;
+    height: 28px;
   }
 }
+
 
 /* =========================
    Small CSS cleanup
