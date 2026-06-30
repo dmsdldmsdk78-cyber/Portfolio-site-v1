@@ -1,24 +1,9 @@
 @font-face {
-    font-family: 'Giranghaerang';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMKIRANGHAERANG.woff') format('woff');
+    font-family: 'JejuStoneWall';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_jejudoldam.woff2') format('woff2');
     font-weight: normal;
     font-display: swap;
 }
-
-@font-face {
-  font-family: 'JejuStoneWall';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_jejudoldam.woff2') format('woff2');
-  font-weight: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Oagothic';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/OAGothic-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-display: swap;
-}
-
 
 :root {
   --ink: #222228;
@@ -430,11 +415,10 @@ main {
 .skills-heading h2,
 .memo h2,
 .contact h2 {
-  font-family: 'Giranghaerang';
   margin: 0;
+  font-family: "Playfair Display", "Noto Sans KR", serif;
   font-size: clamp(32px, 5vw, 52px);
   letter-spacing: -0.05em;
-  font-family: 'Oagothic';
 }
 
 .portfolio-board {
@@ -568,15 +552,13 @@ main {
 
 .sticker-icon {
   font-size: 33px;
-  filter: drop-shadow(2px 2px 0 #989d9e);
-   font-family: 'Giranghaerang';
+  filter: drop-shadow(2px 2px 0 #fff);
 }
 
 .sticker-item b {
   font-size: 18px;
   font-weight: 1000;
   letter-spacing: -.04em;
-  font-family: 'Giranghaerang';
 }
 
 .sticker-item small {
@@ -728,7 +710,7 @@ main {
 
 .detail-copy h3 {
   margin: 18px 0 16px;
-  font-family: 'Oagothic';
+  font-family: "Playfair Display", "Noto Sans KR", serif;
   font-size: clamp(38px, 5vw, 56px);
   line-height: 1;
   letter-spacing: -0.06em;
@@ -834,110 +816,88 @@ main {
   font-size: 13px;
 }
 
+.about {
+  margin-top: 26px;
+  padding: 42px;
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  gap: 28px;
+}
+
+.memo p {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.85;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.stats div {
+  min-height: 150px;
+  padding: 20px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background: #fff;
+  border-radius: 26px;
+  box-shadow: 7px 7px 0 rgba(32, 32, 38, .10);
+}
+
+.stats b {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  color: var(--pink);
+}
+
+.stats span {
+  font-weight: 1000;
+}
+
 .contact {
   margin-top: 26px;
-  padding: 34px 38px;
+  padding: 38px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 28px;
+  gap: 20px;
   border-radius: 34px;
   background:
-    radial-gradient(circle at 10% 20%, rgba(255, 62, 157, .22), transparent 28%),
-    radial-gradient(circle at 92% 50%, rgba(171, 239, 109, .22), transparent 30%),
-    rgba(255, 255, 255, .76);
-  border: 1px solid rgba(255, 255, 255, .9);
+    linear-gradient(90deg, rgba(255, 62, 157, .18), rgba(171, 239, 109, .18)),
+    rgba(255, 255, 255, .75);
   box-shadow: 0 24px 70px rgba(33, 22, 35, 0.08);
-  backdrop-filter: blur(18px);
 }
 
-.contact-copy p {
+.contact p {
   margin: 0 0 10px;
   color: var(--pink);
-  font-size: 13px;
   font-weight: 1000;
-  letter-spacing: .12em;
-  text-transform: uppercase;
 }
 
-.contact-copy h2 {
-  margin: 0;
-  font-family: 'Giranghaerang';
-  font-size: clamp(24px, 4vw, 38px);
-  line-height: 1.2;
-  letter-spacing: -0.05em;
-}
-
-.contact-copy span {
-  display: block;
-  margin-top: 12px;
-  color: var(--muted);
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 1.7;
-}
-
-.contact-links {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-.contact-chip {
-  min-height: 54px;
-  padding: 0 20px;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
+.mail-chip {
+  padding: 14px 20px;
   border: 2px solid var(--ink);
   border-radius: 999px;
   background: #fff;
-  color: var(--ink);
   font-weight: 900;
   box-shadow: 5px 5px 0 var(--shadow);
-  transition: transform .2s ease, box-shadow .2s ease;
 }
 
-.contact-chip span {
-  width: 28px;
-  height: 28px;
-  display: grid;
-  place-items: center;
-  color: #fff;
-  background: var(--pink);
-  border-radius: 50%;
-  font-size: 14px;
-}
-
-.contact-chip b {
-  font-size: 14px;
-  white-space: nowrap;
-}
-
-.social-link {
-  width: 58px;
-  height: 58px;
-  display: grid;
-  place-items: center;
-  border: 2px solid var(--ink);
+.thank-you {
+  padding: 22px 24px;
+  background: #ffc1df;
+  border: 2px solid #fff;
   border-radius: 18px;
-  background: #fff;
-  box-shadow: 5px 5px 0 var(--shadow);
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-
-.social-link img {
-  width: 34px;
-  height: 34px;
-  object-fit: contain;
-}
-
-.contact-chip:hover,
-.social-link:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 8px 8px 0 var(--shadow);
+  font-family: "Playfair Display", serif;
+  font-size: 26px;
+  font-weight: 800;
+  transform: rotate(3deg);
+  box-shadow: 8px 8px 0 rgba(32, 32, 38, .13);
 }
 
 @media (max-width: 980px) {
@@ -1200,7 +1160,6 @@ main {
   background: #ffabd2;
   border: 2px solid var(--ink);
 }
-
 .id-photo img {
   width: 100%;
   height: 100%;
@@ -1415,30 +1374,30 @@ main {
     border-radius: 24px;
   }
 
-  .hero-card .id-body {
-    display: grid;
-    grid-template-columns: 72px 1fr;
-    gap: 13px;
-    align-items: center;
-  }
+.hero-card .id-body {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 13px;
+  align-items: center;
+}
 
-  .hero-card .id-photo {
-    width: 72px;
-    height: 72px;
-    display: block;
-    overflow: hidden;
-    border: 4px solid #1d1d1f;
-    border-radius: 18px;
-    background: #ff9ed0;
-  }
+.hero-card .id-photo {
+  width: 72px;
+  height: 72px;
+  display: block;
+  overflow: hidden;
+  border: 4px solid #1d1d1f;
+  border-radius: 18px;
+  background: #ff9ed0;
+}
 
-  .hero-card .id-photo img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    object-position: center;
-  }
+.hero-card .id-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
 
   .id-top strong {
     font-size: 29px;
@@ -1486,7 +1445,6 @@ main {
     display: none;
   }
 }
-
 /* =========================
    Project Preview Image Fix
    스티커 클릭 시 실제 프로젝트 이미지 표시

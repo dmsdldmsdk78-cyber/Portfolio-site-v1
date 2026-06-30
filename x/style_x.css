@@ -1,0 +1,653 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+
+body {
+  padding-top: 44px;
+  font-family: "Chiron GoRound TC", sans-serif;
+  background: #ffffff;
+  color: #1d1d1f;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* =========================
+   Navigation
+========================= */
+.top-nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  width: 100%;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  z-index: 1000;
+}
+
+.nav-inner {
+  width: min(1100px, calc(100% - 24px));
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+}
+
+.nav-logo {
+  width: 35px;
+  height: 35px;
+  flex: 0 0 auto;
+  background-image: url("./img/apple.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.nav-link {
+  color: #8d8d92;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible,
+.nav-link.active {
+  color: #1d1d1f;
+}
+
+.nav-link.active {
+  font-weight: 700;
+}
+
+
+/* =========================
+   Layout
+========================= */
+.page {
+  width: 100%;
+}
+
+.screen {
+  min-height: 100vh;
+  padding: 48px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-margin-top: 64px;
+}
+
+.panel {
+  width: min(1200px, 100%);
+  min-height: 82vh;
+  padding: 56px;
+  background: #f5f5f7;
+  border-radius: 36px;
+  box-shadow: 0 24px 60px rgba(17, 17, 17, 0.08);
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.panel.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =========================
+   Typography
+========================= */
+.eyebrow,
+.section-label {
+  margin-bottom: 12px;
+  color: #6e6e73;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: clamp(28px, 6vw, 50px);
+  line-height: 1.08;
+  letter-spacing: -0.05em;
+}
+
+h2 {
+  margin-bottom: 18px;
+  font-size: clamp(24px, 5vw, 32px);
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+}
+
+h3 {
+  margin-bottom: 12px;
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.lead,
+.section-head p,
+.project-copy p,
+.contact-panel p,
+.mini-project-card p,
+.portfolio-info p {
+  color: #4d4d52;
+  line-height: 1.75;
+}
+
+.lead,
+.section-head p,
+.project-copy p,
+.contact-panel p,
+.mini-project-card p {
+  max-width: 760px;
+  font-size: 18px;
+}
+
+.portfolio-info p {
+  font-size: 16px;
+}
+
+
+/* =========================
+   Hero
+========================= */
+.hero-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f5f7 0%, #ececf1 100%);
+}
+
+.hero-icons {
+  width: 420px;
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+
+/* =========================
+   Section Header
+========================= */
+.section-head {
+  margin-bottom: 36px;
+}
+
+
+/* =========================
+   Design Section
+========================= */
+.project-panel {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.project-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mockup-card {
+  padding: 10px;
+  background: #ffffff;
+  border-radius: 25px;
+}
+
+.mockup-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+
+/* =========================
+   Project Cards
+   - Publishing / Front-end
+========================= */
+.project-card-grid {
+  display: grid;
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* 퍼블리싱 섹션: PC 기준 3열 */
+.publishing-list {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* 프론트엔드 섹션: PC 기준 2열 */
+.frontend-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.portfolio-card {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 28px;
+  box-shadow: 0 12px 32px rgba(17, 17, 17, 0.05);
+}
+
+.portfolio-thumb {
+  width: 100%;
+  height: 210px;
+  margin-bottom: 18px;
+  overflow: hidden;
+  background: #f1f1f3;
+  border-radius: 22px;
+  flex-shrink: 0;
+}
+
+.portfolio-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.portfolio-info {
+  flex: 1;
+  padding: 0 8px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-info > p:last-of-type {
+  flex: 1;
+}
+
+
+/* =========================
+   Mini Projects
+========================= */
+.mini-project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+  align-items: stretch;
+}
+
+.mini-project-card {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 25px;
+}
+
+.mini-project-thumb {
+  width: 100%;
+  height: 210px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #f1f1f3;
+  border-radius: 20px;
+  flex-shrink: 0;
+}
+
+.mini-project-thumb img {
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  object-fit: contain;
+}
+
+.mini-project-card h3 {
+  min-height: 58px;
+  margin-bottom: 12px;
+}
+
+
+/* =========================
+   Text Highlight
+========================= */
+.text-highlight {
+  background: linear-gradient(
+    to top,
+    rgba(173, 194, 240, 0.45) 45%,
+    transparent 45%
+  );
+  padding: 0 3px;
+}
+
+
+/* =========================
+   Buttons / Chips
+========================= */
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.chip-list a,
+.chip-list span {
+  min-height: 42px;
+  padding: 11px 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #1d1d1f;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.chip-list a:hover,
+.chip-list a:focus-visible {
+  color: #1d1d1f;
+  outline: none;
+  transform: translateY(-2px);
+  transition: transform 0.2s ease;
+}
+
+/* 카드 내부 칩: 카드 하단 정렬 */
+.portfolio-card .chip-list,
+.mini-project-card .chip-list {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.portfolio-card .chip-list a,
+.portfolio-card .chip-list span,
+.mini-project-card .chip-list a,
+.mini-project-card .chip-list span {
+  min-height: 36px;
+  padding: 9px 10px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+
+/* =========================
+   Contact
+========================= */
+.contact-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.social-chip-list {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 28px;
+}
+
+.social-icon {
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.social-icon:hover,
+.email-chip:hover {
+  transform: translateY(-2px);
+}
+
+.github-img,
+.instagram-img {
+  width: 76px;
+  height: 76px;
+}
+
+.email-chip {
+  height: 54px;
+  padding: 0 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #111827;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  background: #ffffff;
+  border: 1px solid #ececec;
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease;
+}
+
+
+/* =========================
+   Quick Menu
+========================= */
+.quick-menu {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 90;
+}
+
+.quick-btn {
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+
+
+/* =========================
+   Responsive
+   - 모바일에서도 카드가 1열로 떨어지지 않도록 유지
+========================= */
+@media (max-width: 900px) {
+  .nav-inner {
+    gap: 16px;
+    justify-content: flex-start;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+  }
+
+  .nav-inner::-webkit-scrollbar {
+    display: none;
+  }
+
+  .panel {
+    min-height: auto;
+    padding: 32px;
+  }
+
+  .project-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .publishing-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .frontend-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .mini-project-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .portfolio-card,
+  .mini-project-card {
+    min-height: 460px;
+  }
+
+  .portfolio-thumb,
+  .mini-project-thumb {
+    height: 180px;
+  }
+
+  .portfolio-card .chip-list,
+  .mini-project-card .chip-list {
+    flex-wrap: wrap;
+  }
+
+  .mini-project-card h3 {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .screen {
+    padding: 18px;
+  }
+
+  .panel {
+    padding: 18px;
+    border-radius: 24px;
+    overflow-x: hidden;
+  }
+
+  .lead,
+  .section-head p,
+  .project-copy p,
+  .contact-panel p,
+  .mini-project-card p,
+  .portfolio-info p {
+    font-size: 12px;
+    line-height: 1.55;
+  }
+
+  h1 {
+    font-size: clamp(30px, 10vw, 42px);
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  .section-label {
+    font-size: 12px;
+  }
+
+  .publishing-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .frontend-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .mini-project-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .portfolio-card,
+  .mini-project-card {
+    min-height: auto;
+    padding: 8px;
+    border-radius: 18px;
+  }
+
+  .portfolio-thumb,
+  .mini-project-thumb {
+    height: 90px;
+    margin-bottom: 10px;
+    border-radius: 14px;
+  }
+
+  .mini-project-thumb img {
+    padding: 4px;
+  }
+
+  .portfolio-info {
+    padding: 0 4px 6px;
+  }
+
+  .portfolio-info p,
+  .mini-project-card p {
+    display: none;
+  }
+
+  .chip-list {
+    margin-top: 12px;
+    gap: 5px;
+  }
+
+  .portfolio-card .chip-list,
+  .mini-project-card .chip-list {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .chip-list a,
+  .chip-list span,
+  .portfolio-card .chip-list a,
+  .portfolio-card .chip-list span,
+  .mini-project-card .chip-list a,
+  .mini-project-card .chip-list span {
+    min-height: 28px;
+    padding: 6px 8px;
+    font-size: 10px;
+  }
+
+  .github-img,
+  .instagram-img {
+    width: 58px;
+    height: 58px;
+  }
+
+  .email-chip {
+    height: 48px;
+    padding: 0 18px;
+    font-size: 13px;
+  }
+}

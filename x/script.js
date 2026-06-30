@@ -68,6 +68,7 @@ const titleEl = document.querySelector("#projectTitle");
 const descEl = document.querySelector("#projectDesc");
 const tagsEl = document.querySelector("#projectTags");
 const linkEl = document.querySelector("#projectLink");
+const detailLinkEl = document.querySelector("#projectDetailLink");
 const previewEl = document.querySelector("#projectPreview");
 const cursorBlob = document.querySelector(".cursor-blob");
 
@@ -90,6 +91,7 @@ function updateProject(projectId) {
     titleEl.textContent = project.title;
     descEl.textContent = project.desc;
     linkEl.href = project.link;
+    detailLinkEl.href = project.detailLink || project.link;
     tagsEl.innerHTML = project.tags.map((tag) => `<span>${tag}</span>`).join("");
     previewEl.innerHTML = makePreview(project);
     previewEl.classList.remove("change");
